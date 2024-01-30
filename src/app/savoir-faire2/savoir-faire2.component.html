@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="container_title">Notre Savoire-Faire</div>
+    <div class="container_top">
+        <div class="container_top_blockgauche">
+                <div [ngClass]="{'container_top_blockgauche_block':true,'visible': visible}">
+                    <div class="container_top_blockgauche_block_title">Plan de travail pour cuisine</div>
+                    <div class="container_top_blockgauche_block_description">revêtement en granit, marbre, quartz, céramique... Tant de choix et une finition soignée pour donner toute l'élégance et un caractère unique à votre cuisine. </div>
+                </div>
+            </div>
+        <div class="container_top_blockmilieu">
+            <img class="container_top_blockmilieu_imagetop" [src]="imageBlock1" alt="">
+        </div>
+    </div>
+    <div class="container_bottom">
+        <div *ngFor="let image of images" class="container_bottom_sercvice">
+            <div class="container_bottom_service_image">
+                <img class="container_bottom_service_image_content" [src]="image.src" alt="image esclier">
+            </div>
+            <div class="container_bottom_service_icon">
+                <img  class="container_bottom_service_icon_content" [src]="image.icon" alt="icon esclier">
+           </div>
+            <div class="container_bottom_service_title">{{image.title}} </div>
+            <div class="container_bottom_service_description">
+                {{image.description}}
+            </div>
+        </div>
+    </div>
+</div>

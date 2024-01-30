@@ -1,0 +1,42 @@
+
+
+.container_mobile{
+    display: none;
+}
+
+@media screen and (max-width:500px) {
+    .container_mobile{
+        position: absolute;
+        background-color: var(--main-color);
+        color: var(--main-bg-color);
+        opacity: 0.80;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 0px;
+        width: 120px;
+        overflow: hidden;
+        top: var(--largeur-header);
+        right: 0;
+        transition: all 0.6s cubic-bezier(0.35, 0.16, 1, 1);
+    }
+
+    .container_mobile.is_clicked {
+        height: 200px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+
+    }
+
+    .onglet{
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .onglet_name{
+        pointer-events: none;
+    }
+
+}

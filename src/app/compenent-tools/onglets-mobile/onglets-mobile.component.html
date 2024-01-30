@@ -1,0 +1,7 @@
+<div [ngClass]="{'container_mobile':true, 'is_clicked':isClicked}">
+    <div class="onglet" *ngFor="let onglet of onglets" (click)="navigateTo(onglet.getNameNavigate())">
+        <div class="onglet_name" ><span class="test">{{onglet.getName()}}</span></div>
+
+    </div>
+</div>
+
