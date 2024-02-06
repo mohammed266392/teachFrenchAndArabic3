@@ -20,7 +20,6 @@
 
 .container_background{
     position: absolute;
-    /* height: 100%; */
     width: 100%;
     right: -50%;
     border-bottom: 550px solid #00000085;
@@ -48,8 +47,6 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    /* margin-right: 20px; */
-    /* right: 30%; */
     top: 50%;
     transform: translate(50%, -50%);
     box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
@@ -101,6 +98,4 @@
 .container_content_title{
     color: var(--main-color2);
     font-size: x-large;
-
-    /* text-shadow: 1px 1px 1px #ffffffc4; */
 }
