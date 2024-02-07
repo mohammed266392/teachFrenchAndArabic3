@@ -14,7 +14,6 @@ import { Onglet } from '../object';
 })
 export class HeaderComponent implements OnInit {
   onglets : Onglet[] = [new Onglet('Home','home'), new Onglet('Contact','contact'),]
-  ongletsMobile : Onglet[] = [new Onglet('Home','home'),new Onglet('Contact','contact'),]
   title : string = "Teach French & Arabic"
   logo : string = "./../../assets/images/logo_solution_piscine.svg"
   menuBurgerIsClicked : boolean = false

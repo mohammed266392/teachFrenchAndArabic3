@@ -2,28 +2,20 @@
     <div class="container_bottom">
         <div *ngFor="let image of images;
         let indexOfelement=index;" [ngClass]="{'container_bottom_sercvice': true, 'visible' : visible}">
-            <div class="container_bottom_service_image">
-                <img class="container_bottom_service_image_content" [src]="image.src" alt="image esclier">
-            </div>
-            <div class="container_bottom_service_icon">
-                <img  class="container_bottom_service_icon_content" [src]="image.icon" alt="icon esclier">
-           </div>
-            <div class="container_bottom_service_title">{{image.title}} </div>
-            <div class="container_bottom_service_description_blok">
-                <div class="container_bottom_service_description">
-                    @if(displayEntireDescription[indexOfelement]){ 
-                        {{displayFirstNWord(image.description.split(' '))}}
-                        <div *ngIf="displayEntireDescription[indexOfelement]" (click)="savoirToggle(indexOfelement)" class="en-savoir-plus">en savoir plus</div>
-                      } @else { 
-                        {{image.description}}
-                        @if(image.description.split(' ').length>nbWordLimite){
-                            <div *ngIf="!displayEntireDescription[indexOfelement]" (click)="savoirToggle(indexOfelement)" class="en-savoir-plus">en savoir moins</div> 
-                        }
-                    }
-                    
-                </div>
-            </div>
-
+        <div class="container_bottom_sercvice_top">
+            <p class="from">from</p>
+            <p class="bonjour">Bonjour</p>
+        </div>
+        <div class="container_bottom_sercvice_middle">
+            <img src="./../../assets/images/avion-50px.svg" alt="avion">
+        </div>
+        <div class="container_bottom_sercvice_bottom">
+            <p class="from">to</p>
+            <p class="bonjour">مرحباً بكم</p>
+        </div>
+        <div class="container_bottom_sercvice_arrow">
+            <img class="image_fleche" src="./../../assets/images/fleche-30.png" alt="fleche_click">
+        </div>
         </div>
     </div>
 </div>

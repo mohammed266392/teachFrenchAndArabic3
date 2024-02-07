@@ -1,19 +1,26 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { ObjectService } from '../object';
+import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-savoir-faire4',
-    templateUrl: './savoir-faire4.component.html',
-    styleUrls: ['./savoir-faire4.component.css'],
+    selector: 'app-savoir-faire5',
+    templateUrl: './savoir-faire5.component.html',
+    styleUrls: ['./savoir-faire5.component.css'],
     standalone: true,
     imports: [NgClass, NgFor, NgIf]
 })
-export class SavoirFaire4Component implements OnInit {
-  nbWordLimite :number=50
+export class SavoirFaire5Component {
   visible :boolean=false;
   imageBlock1 = "./../../assets/images/piscine_savoir_faire_v1.jpg"
-  displayEntireDescription : boolean[] = [false,false,false,false] // Le nombre dépend de la variable images
+
+  blocs : JeVeuxApprendre[] = [
+    new JeVeuxApprendre(0,"Je veux apprendre la langue arabe","si vous parlez le français","learn-arabic",
+    ["./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png"]),
+    new JeVeuxApprendre(1,"أريد أن أتعلم اللغة الفرنسية","إذا كنت تتحدث الفرنسية","learn-french",
+    ["./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png","./../../assets/images/flag_french.png"])
+
+  ]
 
   images : ObjectService[]= [
     new ObjectService(1,"./../../assets/images/construction_traditionnelle2.jpg",
@@ -28,7 +35,7 @@ export class SavoirFaire4Component implements OnInit {
       "Vous envisagez de rénover votre ancienne piscine, notre équipe expérimentée excelle dans la rénovation complète. Nous tous les travaux de rénovation de votre piscine telle que le changement et l'amélioration des pièces a sceller, des réseaux (canalisation). L'installation d'une nouvelle membrane d'étanchéité (PVC armé), le changement de vos margelles et pour finir une remise à la norme de votre Système de sécurité. Travaillant avec sérénité nous mettons en œuvre un diagnostic complet avant travaux. Nous redonnons vie à votre piscine, prolongeant ainsi sa durée tout en lui insufflant une touche contemporaine."
     )]
 
-  constructor(private el: ElementRef)  {}
+  constructor(private el: ElementRef, private router : Router)  {}
   
   ngAfterViewInit() {
       const observer = new IntersectionObserver(entries => {
@@ -39,37 +46,16 @@ export class SavoirFaire4Component implements OnInit {
       });
       observer.observe(this.el.nativeElement);
   }
-  ngOnInit(): void {
-    this.calculateDisplayDescription(this.images)
-  }
-
-  displayFirstNWord(words : string[]):string{
-    let sentenceTruced : string = ""
-    for (var i = 0; i < this.nbWordLimite; i++) {
-      sentenceTruced = sentenceTruced.concat(' ').concat(words[i])
-    }
-    sentenceTruced = sentenceTruced.concat('...')
-    return sentenceTruced
-  }
-
-  displayAll(words : string[]):string{
-    let sentenceTruced : string = ""
-    for (var i = 0; i < this.nbWordLimite; i++) {
-      sentenceTruced = sentenceTruced.concat(' ').concat(words[i])
-    }
-    sentenceTruced = sentenceTruced.concat('...')
-    return sentenceTruced
-  }
-
-  calculateDisplayDescription(images : ObjectService[]):void{
-    for (var i = 0; i < images.length; i++) {
-      this.displayEntireDescription[i] = images[i].description.split(' ').length > this.nbWordLimite
-    }
-  }
-
-  savoirToggle(indexOfelement : number){
-    this.displayEntireDescription[indexOfelement] = !this.displayEntireDescription[indexOfelement]
+  navigateTo(value : JeVeuxApprendre){
+    this.router.navigateByUrl("/"+value.url)
   }
 
 }
 
+export class JeVeuxApprendre{
+  constructor( public id : number,
+      public title : string,
+      public detail : string,
+      public url : string,
+      public flags : string[]){}
+}

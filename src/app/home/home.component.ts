@@ -1,19 +1,22 @@
 import { Component } from '@angular/core';
-import { TextAnimationComponent } from '../compenent-tools/text-animation/text-animation.component';
-import { ReviewComponent } from '../review/review.component';
-import { SolutionPiscineAnimationComponent } from '../compenent-tools/solution-piscine-animation/solution-piscine-animation.component';
 import { Landing4Component } from '../landing4/landing4.component';
-import { SavoirFaire4Component } from '../savoir-faire4/savoir-faire4.component';
+import { OngletService } from '../services/onglet.service';
+import { SavoirFaire5Component } from '../savoir-faire5/savoir-faire5.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   standalone:true,
-  imports :  [SolutionPiscineAnimationComponent,TextAnimationComponent, Landing4Component, SavoirFaire4Component, ReviewComponent]
+  imports :  [Landing4Component, SavoirFaire5Component]
 
 })
 export class HomeComponent {
+  constructor(private ongletService: OngletService) {}
 
+  updateOnglet() {
+    // Mettez à jour l'objet Onglet en utilisant le service
+    this.ongletService.cacherLesOnglets();
+  }
 
 }

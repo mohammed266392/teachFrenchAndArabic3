@@ -1,0 +1,58 @@
+.container_contact{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.container_contact_titre{
+    font-size: xx-large;
+    text-align: center;
+    border-bottom: 1px solid var(--main-color2);
+    display: flex;
+    align-self: center;
+}
+
+.container_contact_texte{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.container2{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container2_telephone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+
+.container2_email{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.container2_telephone_button, .container2_email_button{
+    cursor: pointer;
+    border-bottom: 1px solid var(--main-color2);
+}
+
+@media only screen and (max-width: 500px) {
+    .container2{
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
+
