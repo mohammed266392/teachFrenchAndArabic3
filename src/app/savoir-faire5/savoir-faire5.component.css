@@ -7,12 +7,18 @@
 .container_top_presentiel, .container_top_distanciel{
     display: flex;
     flex-direction: column;
+    gap: 30px;
     align-items: center;
 }
 
+.container_top_presentiel_bloc-img, .container_top_distanciel_bloc-img{
+    height : 250px
+}
 
 .container_top_presentiel_title, .container_top_distanciel_title{
     font-size: larger;
+    font-weight: 600;
+
 }
 
 .container_bottom{
@@ -37,7 +43,7 @@
 }
 
 .container_bottom_sercvice.visible{
-
+    transform: translateY(100%);
     animation: bounceInUp forwards 1s ;
 
 }
@@ -84,6 +90,7 @@
     font-size: larger;
     text-transform: uppercase;
     font-weight: bolder;
+    text-align: center;
 }
 .container_bottom_sercvice_detail{
     margin-top: 5px;
@@ -122,10 +129,17 @@
 }
 
 
-
+.container_bottom_sercvice_top{
+    width: 90%;
+    margin: auto;
+}
 
 
 @media screen and (max-width:500px) {
+    .container_top{
+        gap: 50px;
+    }
+
 
     .container_title_block{
         width: 80%;

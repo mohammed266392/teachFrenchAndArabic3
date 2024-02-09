@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class Landing4Component implements OnInit {
   image2 ="./../../assets/images/landing_page.jpg"
+  logo = "./../../assets/images/logo_teach-french-arabic.svg"
 
   constructor(private router : Router) { }
 

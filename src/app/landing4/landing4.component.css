@@ -7,6 +7,18 @@
     display: flex;
 }
 
+.container_logo{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.container_logo-svg{
+    height: 250px;
+    width: 250px;
+}
+
 .container_image_right{
     overflow: hidden;
     width: 100%;
@@ -98,4 +110,12 @@
 .container_content_title{
     color: var(--main-color2);
     font-size: x-large;
+}
+
+@media only screen and (max-width: 500px) {
+    .container_content{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
 }

@@ -2,7 +2,7 @@
 :root {
 
 	/* Temmplate 2 */
-    --main-bg-color: rgb(255, 255, 255);
+    /* --main-bg-color: rgb(255, 255, 255);
     --main-color: #383026ff;
 	--main-color2: #007994ff;
 	--main-color3: #4dc9ebff;
@@ -11,7 +11,19 @@
 	--main-color3-rgba: 77, 201, 235;
     --taille-standard : 225px;
 	--largeur-header : 88px;
+	--opacity:0.3; */
+
+    --main-bg-color: rgb(255, 255, 255);
+    --main-color: #42312bff;
+	--main-color2: #e0b89fff;
+	--main-color3: #42312bff;
+	--main-color-rgba: 66, 49, 43;
+	--main-color2-rgba: 224, 184, 159;
+	--main-color3-rgba: 66, 49, 43;
+    --taille-standard : 225px;
+	--largeur-header : 88px;
 	--opacity:0.3;
+
 	/* Temmplate 1 
     --main-bg-color: #ffffff;
     --main-color: #000000;
