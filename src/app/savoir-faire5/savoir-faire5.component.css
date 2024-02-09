@@ -3,12 +3,21 @@
     justify-content: space-evenly;
     margin-bottom: 20px;
 }
+
+.container_top_presentiel, .container_top_distanciel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .container_top_presentiel_title, .container_top_distanciel_title{
     font-size: larger;
 }
 
 .container_bottom{
     display: flex;
+    align-items: flex-start;
     gap: 25px;
     padding-left: 30px;
     padding-right: 30px;

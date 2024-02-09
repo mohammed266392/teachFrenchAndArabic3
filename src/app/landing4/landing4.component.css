@@ -22,7 +22,7 @@
     position: absolute;
     width: 100%;
     right: -50%;
-    border-bottom: 550px solid #00000085;
+    border-bottom: 100vh solid #00000085;
     border-left: 291px solid transparent;
     animation-duration: 2s;
     animation-name: slidein;
