@@ -18,7 +18,7 @@ export class AppComponent {
   traduction : string = ''
   constructor( private languageService : TraductionService){
     languageService.language$.subscribe( data => {
-      this.traduction = data
+
     })
   }
 }

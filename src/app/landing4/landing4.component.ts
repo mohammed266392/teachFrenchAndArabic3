@@ -21,7 +21,7 @@ export class Landing4Component implements OnInit {
 
     this.languageService.language$.subscribe( data => {
       this.translateService.setDefaultLang(data) 
-    })
+    }) 
 
    }
 
