@@ -3,6 +3,7 @@ import { OngletsMobileComponent } from '../compenent-tools/onglets-mobile/onglet
 import { NgClass } from '@angular/common';
 import { OngletsComponent } from '../compenent-tools/onglets/onglets.component';
 import { Onglet } from '../object';
+import { OngletService } from '../services/onglet.service';
 
 
 @Component({
@@ -20,7 +21,14 @@ export class HeaderComponent implements OnInit {
   title : string = "Teach French & Arabic"
   logo : string = "./../../assets/images/logo_teach-french-arabic.svg"
   menuBurgerIsClicked : boolean = false
-  constructor() { }
+  constructor(private ongletService : OngletService) { 
+    this.ongletService.ongletsSontCaches$.subscribe((value) => {
+      if (value) {
+        // Mettez à jour votre objet Onglet ici
+        this.menuBurgerIsClicked = false
+      }
+  });
+}
 
   ngOnInit(): void {
   }

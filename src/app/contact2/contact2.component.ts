@@ -24,6 +24,7 @@ export class Contact2Component {
 
   updateOnglet() {
     // Mettez à jour l'objet Onglet en utilisant le service
+    console.log('cliqqque')
     this.ongletService.cacherLesOnglets();
   }
 }
