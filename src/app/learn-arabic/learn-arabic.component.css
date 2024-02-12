@@ -94,13 +94,11 @@
 
 .container_objectifs_bloc{
     width: 350px;
-    height: 250px;
     background-color: antiquewhite;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 25%;
     align-items: center;
 }
 .container_objectifs_bloc-title{
@@ -109,6 +107,7 @@
     font-size: large;
 }
 .container_objectifs_bloc-texte{
+    margin-top: 30px;
     width: 80%;
 }
 .container_objectifs_bloc_liste{
