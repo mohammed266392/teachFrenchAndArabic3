@@ -111,7 +111,9 @@
     width: 80%;
 }
 .container_objectifs_bloc_liste{
-    list-style-type : disc
+    list-style-type : disc;
+    direction: rtl;
+    text-align: right;
 }
 .container_objectifs_bloc_liste_li{
     margin-bottom: 10px;
