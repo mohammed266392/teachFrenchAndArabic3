@@ -13,7 +13,10 @@ import { Onglet } from '../object';
     imports: [OngletsComponent, NgClass, OngletsMobileComponent]
 })
 export class HeaderComponent implements OnInit {
-  onglets : Onglet[] = [new Onglet('Home','home'), new Onglet('Contact','contact'),]
+  onglets : Onglet[] = [new Onglet('Home','home'),
+    new Onglet('Learn french','learn-french'),
+    new Onglet('Learn arabic','learn-arabic'),
+    new Onglet('Contact','contact'),]
   title : string = "Teach French & Arabic"
   logo : string = "./../../assets/images/logo_teach-french-arabic.svg"
   menuBurgerIsClicked : boolean = false

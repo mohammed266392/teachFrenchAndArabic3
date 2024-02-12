@@ -45,7 +45,7 @@
 }
 
 .container_main_block1--title{
-    text-wrap: nowrap;
+    /* text-wrap: nowrap; */
     text-align: center;
     font-size: xx-large;
     text-transform: uppercase;
@@ -89,6 +89,8 @@
 
 .container_objectifs{
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: space-evenly;
 }
 
@@ -118,3 +120,43 @@
 .container_objectifs_bloc_liste_li{
     margin-bottom: 10px;
 }
+
+.container_resultats{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: right;
+}
+
+.container_resultats-title{
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.container_resultats-description{
+    width: 80%;
+
+}
+
+.button {
+    background-color: #e0b89f; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement intérieur */
+    font-size: 16px; /* Taille du texte */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Change le curseur en main au survol */
+    border-radius: 5px; /* Bordures arrondies */
+    transition: all 0.3s ease; /* Transition douce pour les effets */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    }
+
+    .button:hover {
+    background-color: #cba986; /* Couleur au survol (un peu plus foncée) */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+    }
+
+    .button:focus {
+    outline: none; /* Supprime le contour par défaut lors du focus */
+    }

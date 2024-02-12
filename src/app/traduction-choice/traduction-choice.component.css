@@ -1,0 +1,49 @@
+/* Style pour le conteneur */
+.container {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    background-color: #00000094;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    flex-direction: column; /* Organise les boutons verticalement */
+    gap: 20px; /* Espacement entre les boutons */
+  }
+.container.active{
+    display: none;
+}
+  /* Style de base pour les boutons */
+  .container button {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #000000; /* Couleur du texte */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Bordures arrondies */
+    transition: all 0.3s ease; /* Transition douce pour les effets de survol */
+    outline: none; /* Supprime le contour lors du clic */
+  }
+  
+  /* Style spécifique pour le bouton Français */
+  .container_fr {
+    background-color: #ebd5ddff; /* Bleu */
+    width: 195px;
+  }
+  
+  .container_fr:hover {
+    background-color: rgb(233, 164, 189); /* Bleu plus foncé au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour donner de la profondeur */
+  }
+  
+  /* Style spécifique pour le bouton Arabe */
+  .container_arabe {
+    background-color: #f5abb6ff; /* Rouge */
+    width: 195px;
+  }
+  
+  .container_arabe:hover {
+    background-color: rgb(245, 123, 141); /* Rouge plus foncé au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour donner de la profondeur */
+  }

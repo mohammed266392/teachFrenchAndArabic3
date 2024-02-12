@@ -13,7 +13,7 @@ import { TraductionService } from '../services/traduction.service';
     imports  : [ NgStyle, TranslateModule ]
 })
 export class Landing4Component implements OnInit {
-  image2 ="./../../assets/images/landing_page.jpg"
+  image2 ="./../../assets/images/background-enseignement.jpg"
   logo = "./../../assets/images/logo_teach-french-arabic.svg"
 
   constructor(private router : Router, 
