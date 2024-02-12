@@ -16,7 +16,8 @@ export class Landing4Component implements OnInit {
   image2 ="./../../assets/images/landing_page.jpg"
   logo = "./../../assets/images/logo_teach-french-arabic.svg"
 
-  constructor(private router : Router, private translateService: TranslateService, 
+  constructor(private router : Router, 
+    private translateService: TranslateService, 
     private languageService : TraductionService){
 
     this.languageService.language$.subscribe( data => {
