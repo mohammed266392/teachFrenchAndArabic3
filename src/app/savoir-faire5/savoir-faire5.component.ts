@@ -21,7 +21,7 @@ export class SavoirFaire5Component {
     new JeVeuxApprendre(0,"Je veux apprendre la langue arabe","si vous parlez le français","learn-arabic",
     ["./../../assets/images/france.svg", "./../../assets/images/canada.svg", "./../../assets/images/pays-bas.svg", "./../../assets/images/suisse.svg", "./../../assets/images/belgique.svg"]),
     new JeVeuxApprendre(1,"أريد أن أتعلم اللغة الفرنسية","إذا كنت تتحدث لهجة عربية","learn-french",
-    ["./../../assets/images/emirats.svg","./../../assets/images/koweit.svg","./../../assets/images/qatar.svg", "./../../assets/images/palestine.svg", "./../../assets/images/maroc.svg","./../../assets/images/lybie.svg", "./../../assets/images/algerie.svg","./../../assets/images/arabie-saoudite.svg","./../../assets/images/egypte.svg","./../../assets/images/jordanie.svg","./../../assets/images/liban.svg","./../../assets/images/tunisie.svg"])
+    ["./../../assets/images/emirats.svg","./../../assets/images/koweit.svg","./../../assets/images/qatar.svg", "./../../assets/images/palestine.svg", "./../../assets/images/maroc.svg","./../../assets/images/lybie.svg", "./../../assets/images/algerie.svg","./../../assets/images/arabie-saoudite.svg","./../../assets/images/egypte.svg","./../../assets/images/jordanie.svg","./../../assets/images/liban.svg","./../../assets/images/tunisie.svg","./../../assets/images/yemen.svg","./../../assets/images/irak.svg","./../../assets/images/Design sans titre - 13.svg","./../../assets/images/Design sans titre - 17.svg","./../../assets/images/Design sans titre - 19.svg"])
 
   ]
 
