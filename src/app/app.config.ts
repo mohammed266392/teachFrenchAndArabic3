@@ -1,5 +1,5 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { InMemoryScrollingFeature, InMemoryScrollingOptions, provideRouter, withInMemoryScrolling } from '@angular/router';
 
 import { routes } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,6 +10,13 @@ import {TranslateLoader, TranslateModule } from '@ngx-translate/core';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
+const scrollConfig: InMemoryScrollingOptions = {
+  scrollPositionRestoration: 'top',
+  anchorScrolling: 'enabled',
+};
+
+const inMemoryScrollingFeature: InMemoryScrollingFeature =
+  withInMemoryScrolling(scrollConfig);
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -23,5 +30,5 @@ export const appConfig: ApplicationConfig = {
         deps: [HttpClient] // Dépendance nécessaire pour le loader
       }
     }) ),
-    provideRouter(routes)]
+    provideRouter(routes, inMemoryScrollingFeature)]
 };
