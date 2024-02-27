@@ -6,26 +6,58 @@
                     <form  class="formulaire_box" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                         <div class="formulaire_box_component">
                           <label class="formulaire_box_component_label" for="email">Email:</label>
-                          <input class="formulaire_box_component_input" type="email" formControlName="email">
+                          <div class="formulaire_box_component_input">
+                            <input class="formulaire_box_component_input--input" type="email" formControlName="email">
+                            <div class="formulaire_box_component_input--border"></div>
+                          </div>
+                        </div>
+                        <div class="formulaire_box_component">
+                          <label class="formulaire_box_component_label" for="password">Password:</label>
+                          <div class="formulaire_box_component_input">
+                            <input class="formulaire_box_component_input--input" type="password" formControlName="password">
+                            <div class="formulaire_box_component_input--border"></div>
+                          </div>
+                        </div>
+
+                        <div  class="formulaire_box_component">
+                          <label class="formulaire_box_component_label" for="email">First Name:</label>
+                          <div class="formulaire_box_component_input">
+                            <input class="formulaire_box_component_input--input" type="text" formControlName="firstName">
+                            <div class="formulaire_box_component_input--border"></div>
+                          </div>
                         </div>
                         <div  class="formulaire_box_component">
-                          <label for="password">Password:</label>
-                          <input type="password" formControlName="password">
-                        </div>
-                        <div  class="formulaire_box_component">
-                          <label for="firstName">First Name:</label>
-                          <input type="text" formControlName="firstName">
-                        </div>
-                        <div  class="formulaire_box_component">
-                          <label for="lastName">Last Name:</label>
-                          <input type="text" formControlName="lastName">
-                        </div>
-                        <button type="submit" [disabled]="!registerForm.valid">Register</button>
+                            <label class="formulaire_box_component_label" for="email">Last Name:</label>
+                            <div class="formulaire_box_component_input">
+                              <input class="formulaire_box_component_input--input" type="text" formControlName="lastName">
+                              <div class="formulaire_box_component_input--border"></div>
+                            </div>
+                          </div>
+                        <button type="submit" [disabled]="!registerForm.valid">create account</button>
                       </form>
                 </div>
             </div>
             <div class="container_box_slider--login">
+                 <div class="formulaire">
+                    <form  class="formulaire_box" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <div class="formulaire_box_component">
+                          <label class="formulaire_box_component_label" for="email">Email:</label>
+                          <div class="formulaire_box_component_input">
+                            <input class="formulaire_box_component_input--input" type="email" formControlName="email">
+                            <div class="formulaire_box_component_input--border"></div>
+                          </div>
+                        </div>
+                        <div class="formulaire_box_component">
+                          <label class="formulaire_box_component_label" for="password">Password:</label>
+                          <div class="formulaire_box_component_input">
+                            <input class="formulaire_box_component_input--input" type="password" formControlName="password">
+                            <div class="formulaire_box_component_input--border"></div>
+                          </div>
+                        </div>
 
+                        <button type="submit" [disabled]="!registerForm.valid">create account</button>
+                      </form>
+                    </div>
             </div>
         </div>
         <div class="container_box_choice">
