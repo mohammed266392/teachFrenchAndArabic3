@@ -41,6 +41,7 @@
     font-weight: 300;
 }
 .header_droite{
+    cursor: pointer;
     display: flex;
     justify-content: flex-end;
     flex-basis: var(--taille-standard);

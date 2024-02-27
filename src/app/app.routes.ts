@@ -15,5 +15,9 @@ export const routes: Routes = [
     },
     {path:'learn-french',
     loadComponent: () => import("./learn-french/learn-french.component").then(module => module.LearnFrenchComponent)
+    },
+    {path:'register',
+    loadComponent: () => import("./register/register.component").then(module => module.RegisterComponent)
     }
+    
 ];

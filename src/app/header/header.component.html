@@ -11,7 +11,7 @@
     <div class="header_milieu">
         <app-onglets [onglets]="onglets"></app-onglets>
     </div>
-    <div class="header_droite">
+    <div class="header_droite" (click)="navigateToRegister()">
         <div class="header_droite_container">        
             <svg class="header_droite_container_svg"  viewBox="0 0 23 23"  xmlns="http://www.w3.org/2000/svg">
                 <circle class="header_droite_container_svg_circle" cx="11.5" cy="5.5" r="5.5" />

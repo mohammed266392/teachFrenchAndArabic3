@@ -4,6 +4,7 @@ import { NgClass } from '@angular/common';
 import { OngletsComponent } from '../compenent-tools/onglets/onglets.component';
 import { Onglet } from '../object';
 import { OngletService } from '../services/onglet.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -21,7 +22,8 @@ export class HeaderComponent implements OnInit {
   title : string = "Teach French & Arabic"
   logo : string = "./../../assets/images/logo_teach-french-arabic.svg"
   menuBurgerIsClicked : boolean = false
-  constructor(private ongletService : OngletService) { 
+  constructor(private ongletService : OngletService,
+    private router : Router) { 
     this.ongletService.ongletsSontCaches$.subscribe((value) => {
       if (value) {
         // Mettez à jour votre objet Onglet ici
@@ -36,5 +38,9 @@ export class HeaderComponent implements OnInit {
 
   clickHeader() : void {
     this.menuBurgerIsClicked = !this.menuBurgerIsClicked
+  }
+
+  navigateToRegister() : void {
+    this.router.navigateByUrl("/register")
   }
 }
