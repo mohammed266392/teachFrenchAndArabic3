@@ -7,7 +7,7 @@
 .container_box{
     border: 1px solid black;
     height: 70%;
-    width: 350px;
+    width: 450px;
     position: relative;
     overflow: hidden;
 }
@@ -95,4 +95,12 @@
 }
 .container_box_choice--background.login{
     left: 50%;
+}
+.invalid-feedback{
+    color: red;
+    font-size: small;
+}
+
+span{
+    font-weight: bold;
 }

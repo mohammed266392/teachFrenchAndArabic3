@@ -3,7 +3,7 @@
         <div [ngClass]="{'container_box_slider' : true, 'login': login}">
             <div class="container_box_slider--register">
                 <div class="formulaire">
-                    <form  class="formulaire_box" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <form  class="formulaire_box" [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()">
                         <div class="formulaire_box_component">
                           <label class="formulaire_box_component_label" for="email">Email:</label>
                           <div class="formulaire_box_component_input">
@@ -20,26 +20,64 @@
                         </div>
 
                         <div  class="formulaire_box_component">
-                          <label class="formulaire_box_component_label" for="email">First Name:</label>
+                          <label class="formulaire_box_component_label" for="firstName">First Name:</label>
                           <div class="formulaire_box_component_input">
                             <input class="formulaire_box_component_input--input" type="text" formControlName="firstName">
                             <div class="formulaire_box_component_input--border"></div>
                           </div>
                         </div>
                         <div  class="formulaire_box_component">
-                            <label class="formulaire_box_component_label" for="email">Last Name:</label>
+                            <label class="formulaire_box_component_label" for="lastName">Last Name:</label>
                             <div class="formulaire_box_component_input">
                               <input class="formulaire_box_component_input--input" type="text" formControlName="lastName">
                               <div class="formulaire_box_component_input--border"></div>
                             </div>
                           </div>
-                        <button type="submit" [disabled]="!registerForm.valid">create account</button>
+                        <button type="submit" >create account</button>
+
+                        
+                        @if (submitted && fRegister['email'].errors) {
+                          <div class="invalid-feedback">
+                            @if (fRegister['email'].errors['required']) {
+                            <div><span>Email</span>  is required</div>
+                            }
+                          </div>
+                        }
+
+                        @if (submitted && fRegister['email'].errors?.['email']) {
+                          <div class="invalid-feedback">
+                            @if (fRegister['email'].errors?.['email']) {
+                            <div><span>Email</span> is not good</div>
+                            }
+                          </div>
+                        }
+                        @if (submitted && fRegister['password'].errors) {
+                          <div class="invalid-feedback">
+                            @if (fRegister['password'].errors) {
+                            <div><span>Password</span>  need to be more longer than 6</div>
+                            }
+                          </div>
+                        }
+                        @if (submitted && fRegister['firstName'].errors) {
+                          <div class="invalid-feedback">
+                            @if (fRegister['firstName'].errors) {
+                            <div><span>First Name</span>  need to be more longer than 1</div>
+                            }
+                          </div>
+                        }
+                        @if (submitted && fRegister['lastName'].errors) {
+                          <div class="invalid-feedback">
+                            @if (fRegister['lastName'].errors) {
+                            <div><span>Last Name</span>  need to be more longer than 1</div>
+                            }
+                          </div>
+                        }
                       </form>
                 </div>
             </div>
             <div class="container_box_slider--login">
                  <div class="formulaire">
-                    <form  class="formulaire_box" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <form  class="formulaire_box" [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
                         <div class="formulaire_box_component">
                           <label class="formulaire_box_component_label" for="email">Email:</label>
                           <div class="formulaire_box_component_input">
@@ -55,7 +93,30 @@
                           </div>
                         </div>
 
-                        <button type="submit" [disabled]="!registerForm.valid">create account</button>
+                        <button type="submit" >login</button>
+                        @if (submittedLogin && fLogin['email'].errors) {
+                          <div class="invalid-feedback">
+                            @if (fLogin['email'].errors['required']) {
+                            <div><span>Email</span>  is required !!</div>
+                            }
+                          </div>
+                        }
+
+                        @if (submittedLogin && fLogin['email'].errors?.['email']) {
+                          <div class="invalid-feedback">
+                            @if (fLogin['email'].errors?.['email']) {
+                            <div><span>Email</span> is not good</div>
+                            }
+                          </div>
+                        }
+
+                        @if (submittedLogin && fLogin['password'].errors) {
+                          <div class="invalid-feedback">
+                            @if (fLogin['password'].errors) {
+                            <div><span>Password</span>  need to be more longer than 6</div>
+                            }
+                          </div>
+                        }
                       </form>
                     </div>
             </div>
