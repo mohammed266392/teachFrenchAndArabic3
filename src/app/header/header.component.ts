@@ -19,6 +19,11 @@ export class HeaderComponent implements OnInit {
     new Onglet('Learn french','learn-french'),
     new Onglet('Learn arabic','learn-arabic'),
     new Onglet('Contact','contact'),]
+
+  ongletsMobile : Onglet[] = [new Onglet('Home','home'),
+  new Onglet('Learn french','learn-french'),
+  new Onglet('Learn arabic','learn-arabic'),
+  new Onglet('Connexion','register'),]
   title : string = "Teach French & Arabic"
   logo : string = "./../../assets/images/logo_teach-french-arabic.svg"
   menuBurgerIsClicked : boolean = false

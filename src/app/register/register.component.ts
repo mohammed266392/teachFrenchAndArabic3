@@ -41,9 +41,20 @@ export class RegisterComponent {
   }
   onSubmitRegister() {
     // Ici, vous pouvez gérer la soumission de votre formulaire
+    console.log(this.registerForm.value);
     this.submitted = true
     if(this.submitted){
       return
+      // this.httpClient.post<any>(this.urlCreate, this.registerForm.value).subscribe({
+      //   next: data => {
+      //     console.log('Réponse de la requête POST : ', data);
+      //     // Traitez la réponse de la requête ici
+      //   },
+      //   error: error => {
+      //     console.error('Erreur lors de la requête POST : ', error);
+      //     // Traitez l'erreur ici
+      //   }
+      // });
     }
     console.log(this.registerForm.value);
   }
